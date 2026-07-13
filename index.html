@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>TETRIS — 클래식 테트리스</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <main class="stage">
+    <header>
+      <h1>T · E · T · R · I · S</h1>
+      <p>← → ↓ 이동 · ↑ 회전 · 스페이스 하드드롭 · P 일시정지</p>
+    </header>
+
+    <div class="game">
+      <aside class="side left">
+        <section class="panel">
+          <h3>HOLD</h3>
+          <canvas id="hold" width="100" height="100"></canvas>
+        </section>
+        <section class="panel">
+          <h3>점수</h3>
+          <b id="score">0</b>
+        </section>
+        <section class="panel">
+          <h3>최고</h3>
+          <b id="best">0</b>
+        </section>
+      </aside>
+
+      <div class="board-wrap">
+        <canvas id="board" width="300" height="600"></canvas>
+        <div id="overlay" class="overlay">
+          <h2 id="ovT">시작</h2>
+          <p id="ovP">스페이스 또는 시작 버튼을 누르세요.</p>
+          <button id="startBtn">▶ 시작</button>
+        </div>
+      </div>
+
+      <aside class="side right">
+        <section class="panel">
+          <h3>NEXT</h3>
+          <canvas id="next" width="100" height="280"></canvas>
+        </section>
+        <section class="panel">
+          <h3>레벨</h3>
+          <b id="level">1</b>
+        </section>
+        <section class="panel">
+          <h3>라인</h3>
+          <b id="lines">0</b>
+        </section>
+      </aside>
+    </div>
+
+    <nav class="dpad">
+      <button class="d" data-k="left">◀</button>
+      <button class="d" data-k="rotate">↻</button>
+      <button class="d" data-k="right">▶</button>
+      <button class="d" data-k="down">▼</button>
+      <button class="d" data-k="drop">⏬</button>
+      <button class="d" data-k="hold">HOLD</button>
+    </nav>
+  </main>
+
+  <script src="script.js"></script>
+<script defer src="https://static.cloudflareinsights.com/beacon.min.js/v4513226cdae34746b4dedf0b4dfa099e1781791509496" integrity="sha512-ZE9pZaUXND66v380QUtch/5sE9tPFh2zg45pR2PB0CVkCtOREv2AJKkSidISWkysEuQ0EH8faUU5du78bx87UQ==" data-cf-beacon='{"version":"2024.11.0","token":"c7ff09459b034bca86d316da146b68be","r":1,"server_timing":{"name":{"cfCacheStatus":true,"cfEdge":true,"cfExtPri":true,"cfL4":true,"cfOrigin":true,"cfSpeedBrain":true},"location_startswith":null}}' crossorigin="anonymous"></script>
+</body>
+</html>
