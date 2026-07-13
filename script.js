@@ -301,7 +301,7 @@ document.addEventListener('keydown', (e) => {
   if (e.key === 'ArrowLeft')  { move(-1, 0); draw(); }
   else if (e.key === 'ArrowRight') { move(1, 0); draw(); }
   else if (e.key === 'ArrowDown')  { if (move(0, 1)) { score++; scoreEl.textContent = score; } draw(); }
-  else if (e.key === 'Z')    { tryRotate(); draw(); }
+  else if (e.key === 'z')    { tryRotate(); draw(); }
   else if (e.key === ' ')          { e.preventDefault(); hardDrop(); draw(); }
   else if (e.key === 'c' || e.key === 'C' || e.key === 'Shift') { holdPiece(); draw(); }
 });
